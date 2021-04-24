@@ -1,5 +1,11 @@
-<ap-foto url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sultan_the_Barbary_Lion.jpg/440px-Sultan_the_Barbary_Lion.jpg" 
+<!-- 
+  Passando valores para url e description em fotos.component.ts
+  <ap-foto url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sultan_the_Barbary_Lion.jpg/440px-Sultan_the_Barbary_Lion.jpg" 
   description="Leão"></ap-foto>
 
 <ap-foto url="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lioness_Etosha_NP.jpg/500px-Lioness_Etosha_NP.jpg" 
-  description="Leoa"></ap-foto>
+  description="Leoa"></ap-foto> -->
+
+  <ap-foto *ngFor="let foto of fotos" [url]="foto.url" [description]="foto.description"></ap-foto>
+
+
