@@ -1,12 +1,13 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Foto } from './fotos/foto/foto';
+import { FotoService } from './fotos/foto/foto.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   /*
   Exemplo de dados em array
@@ -22,14 +23,15 @@ export class AppComponent {
   ];*/
 
   // Array de Object
-  fotos: Object[] = [];
+  fotos: Foto[] = [];
 
-  constructor(http: HttpClient) {
-    // Recebe um array de Object da URL
-    http
-      .get<Object[]>('http://localhost:3000/flavio/photos')
-      .subscribe(
-        fotos => this.fotos = fotos
-      )
+  constructor(private fotoService: FotoService) {
+  }
+
+  ngOnInit(): void {
+    
+    this.fotoService.listFromUser('flavio').subscribe(
+      fotos => this.fotos = fotos
+    )
   }
 }
