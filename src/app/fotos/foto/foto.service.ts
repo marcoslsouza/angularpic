@@ -14,6 +14,6 @@ export class FotoService {
 
         // Recebe um array de Object da URL
         return this.http
-        .get<Foto[]>('http://localhost:3000/flavio/photos');
+        .get<Foto[]>('http://localhost:3000/'+ userName +'/photos');
     }
 }
