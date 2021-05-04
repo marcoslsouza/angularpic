@@ -22,6 +22,7 @@ export class FotoListComponent implements OnInit {
 
   // Array de Object
   fotos: Foto[] = [];
+  filtro: string = '';
 
   constructor(private fotoService: FotoService, private activatedRoute: ActivatedRoute) {
   }
