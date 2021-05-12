@@ -1,6 +1,6 @@
 <div class="text-center mt-3 mb-3">
   <form>
-    <input type="search" class="rounded" placeholder="Pesquisar..." autofocus (keyup)="filtro = $event.target.value">
+    <input type="search" class="rounded" placeholder="Pesquisar..." autofocus (keyup)="debounce.next($event.target.value)">
   </form>
 </div>
 <ap-fotos [fotos]="fotos | filtroDescricao: filtro"></ap-fotos>
