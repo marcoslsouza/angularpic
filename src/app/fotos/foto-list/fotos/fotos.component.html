@@ -6,6 +6,10 @@
 <ap-foto url="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lioness_Etosha_NP.jpg/500px-Lioness_Etosha_NP.jpg" 
   description="Leoa"></ap-foto> -->
 
+  <p class="text-center text-muted" *ngIf="!fotos.length">
+    Não foi encontrada nenhuma foto!
+  </p>
+
   <ol class="list-unstyled">
     <li *ngFor="let cols of rows" class="row">
 
