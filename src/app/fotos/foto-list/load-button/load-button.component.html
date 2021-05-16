@@ -1,0 +1,8 @@
+<div class="text-center" *ngIf="temMais; else messagemTemplate">
+    <button class="btn btn-primary">Carregue mais...</button>
+</div>
+
+<ng-template #messagemTemplate>
+<p class="text-center text-muted">
+    Não há mais dados para carregar!
+</p>

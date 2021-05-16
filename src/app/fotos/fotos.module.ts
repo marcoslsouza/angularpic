@@ -5,6 +5,7 @@ import { FiltroDescricao } from "./foto-list/filtro-descricao.pipe";
 import { FotoListComponent } from "./foto-list/foto-list.component";
 import { FotoListResolver } from "./foto-list/foto-list.resolver";
 import { FotosComponent } from "./foto-list/fotos/fotos.component";
+import { LoadButtonComponent } from "./foto-list/load-button/load-button.component";
 import { FotoComponent } from "./foto/foto.component";
 import { FotoService } from "./foto/foto.service";
 
@@ -13,7 +14,8 @@ import { FotoService } from "./foto/foto.service";
         FotoComponent,
         FotoListComponent,
         FotosComponent,
-        FiltroDescricao
+        FiltroDescricao,
+        LoadButtonComponent
     ],
     exports: [FotoComponent],
     imports: [
